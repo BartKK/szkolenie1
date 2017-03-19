@@ -105,3 +105,22 @@ console.log(count instanceof Number); // false
 console.log(found instanceof Boolean); // false
 
 //
+
+var name4 = new String('Genowefa');
+var count1 = new Number(10);
+var found1 = new Boolean(false);
+
+console.log(typeof name4); //
+console.log(typeof count1)
+console.log(typeof found1)
+
+//
+
+var founded = new Boolean(false);
+
+if(founded) {
+  console.log('I found a variable!'); // to zostanie wyświetlone, bo sprawdza czy obiekt istnieje
+} else{
+console.log("I haven't found a variable!");
+
+}
