@@ -20,3 +20,10 @@ car2.model = '500';
 
 var arr = ['red', 'green', 'blue'];
 console.log(arr.[1]);
+
+
+// literały wyrażeń regularnych
+
+var numbers = /\d+/g;
+
+var numbers2 = new RegExp('\\d+','g')
