@@ -1,12 +1,45 @@
-// Przeciążenia (overloading)
-// C++
+// // Obiekt this
+//
+// var person = {
+//   name: 'Piotr',
+//   logName: function () {
+//     console.log(person.name)
+//   }
+// };
+//
+// person.logName();
+//
+// //
+//
+//
+// var person = {
+//   name: 'Piotr',
+//   logName: function () {
+//     console.log(this.name)
+//   }
+// };
+//
+// person.logName();
+//
+//
+// //
 
-function message(mes) {
-  console.log(mes);
+function allSayHello() {
+  console.log(this.name)
 }
 
-function message() {
-  console.log('Default')
-}
+var person1 = {
+  name: 'Piter',
+  sayHello: allSayHello
+};
 
-message('Hello');
+var person2 = {
+  name: 'Karol',
+  sayHello: allSayHello
+};
+
+var name = 'Kinga';
+
+console.log(person1.sayHello()); // Piter
+console.log(person2.sayHello()); // Karol
+console.log(allSayHello());
