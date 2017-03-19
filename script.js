@@ -124,3 +124,28 @@ if(founded) {
 console.log("I haven't found a variable!");
 
 }
+
+
+
+//
+
+
+
+//Funkcje
+
+// Właściwości typu Function - [[Call]]
+
+// deklaracja funkcji
+function add(3, 4) {
+  return a + b;
+  console.log(sum); //7
+}
+
+
+// wyrażenie funkcji
+var result = add(3, 4);
+console.log(result); //
+
+var add = function(a, b) {
+  return a + b;
+}
