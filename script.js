@@ -27,3 +27,13 @@ console.log(arr.[1]);
 var numbers = /\d+/g;
 
 var numbers2 = new RegExp('\\d+','g')
+
+
+// dostęp do klucze
+
+var arry = [];
+
+array.push(234234);
+
+var method = 'push';
+array[method](13513);
