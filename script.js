@@ -1,4 +1,4 @@
-// Modyfikacja this
+// Modyfikacja this apply()
 
 
 
@@ -17,6 +17,6 @@ var person2 = {
 
 var name = 'Michelle';
 
-logNameAll.call(this, 'global');
-logNameAll.call(person1, 'person1');
-logNameAll.call(person2, 'person2');
+logNameAll.apply(this, ['global']); // global Michelle
+logNameAll.apply(person1, ['person1']); // Piter
+logNameAll.apply(person2, ['person2']); // Michel
