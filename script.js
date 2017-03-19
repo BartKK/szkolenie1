@@ -1,45 +1,22 @@
-// // Obiekt this
-//
-// var person = {
-//   name: 'Piotr',
-//   logName: function () {
-//     console.log(person.name)
-//   }
-// };
-//
-// person.logName();
-//
-// //
-//
-//
-// var person = {
-//   name: 'Piotr',
-//   logName: function () {
-//     console.log(this.name)
-//   }
-// };
-//
-// person.logName();
-//
-//
-// //
+// Modyfikacja this
 
-function allSayHello() {
-  console.log(this.name)
+
+
+function logNameAll(arg) {
+
+  console.log(arg + ": " + this.name);
 }
 
 var person1 = {
-  name: 'Piter',
-  sayHello: allSayHello
+  name: 'Piter'
 };
 
 var person2 = {
-  name: 'Karol',
-  sayHello: allSayHello
+  name: 'Michel'
 };
 
-var name = 'Kinga';
+var name = 'Michelle';
 
-console.log(person1.sayHello()); // Piter
-console.log(person2.sayHello()); // Karol
-console.log(allSayHello());
+logNameAll.call(this, 'global');
+logNameAll.call(person1, 'person1');
+logNameAll.call(person2, 'person2');
