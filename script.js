@@ -1,12 +1,18 @@
-// Obiekty - usuwanie wartości
+function keys() {
+var arrKeys = []
+var key;
+for(key in obj) {
+  if(obj.hasOwnProperty(key)){
+    arrKeys.push(key)
+  }
+}
+return arrKeys;
+}
 
-var person = {
-  name: 'asas'
-};
+var obj = {
+red: 'red',
+  green: 'green',
+  blue: 'blue'
+}
 
-console.log(person.name);
-
-delete person.name;
-
-console.log('name' in person);
-console.log(person.name);
+console.log(keys(obj)); //['red', 'green', 'blue']
